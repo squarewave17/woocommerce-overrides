@@ -1,12 +1,6 @@
 <?php
 
 /**
- * The plugin bootstrap file
- *
- * This file is read by WordPress to generate the plugin information in the plugin
- * admin area. This file also includes all of the dependencies used by the plugin,
- * registers the activation and deactivation functions, and defines a function
- * that starts the plugin.
  *
  * @link              oxyframe.com
  * @since             1.0.0
@@ -15,7 +9,7 @@
  * @wordpress-plugin
  * Plugin Name:       Woocommerce Overrides
  * Plugin URI:        oxyframe.com
- * Description:       Overrides all woocommerce templates.
+ * Description:       Overrides all woocommerce templates. Woo will use everything in this plugin instead of it's own, so tinker with the templates 'till your heart's content, and write all your styles intemplates/css/woocommerce.css - There are the original files from Woocommerce and Oxygen in 'ref' - for your reference.
  * Version:           1.0.1
  * Author:            Paul Ryder
  * Author URI:        oxyframe.com
