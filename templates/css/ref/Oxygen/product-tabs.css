@@ -1,0 +1,94 @@
+/* Reviews Styles to include in editor */
+
+/* Primary Color */
+.woocommerce .oxy-product-tabs #review_form #respond .form-submit input {
+    background: var(--primary-cta);
+    border-color: var(--primary-cta);
+}
+.woocommerce .oxy-product-tabs .star-rating span {
+    color: var(--primary-cta);
+}
+.woocommerce .oxy-product-tabs #reviews #comments ol.commentlist li .comment-text {
+    border-top-color: var(--primary-cta);
+}
+.woocommerce .oxy-product-tabs #review_form #respond textarea:focus {
+    border-color: var(--primary-cta);
+    box-shadow: var(--primary-cta) 0 0 5px;
+}
+
+/* Secondary Color */
+.woocommerce .oxy-product-tabs #review_form #respond .form-submit input:hover {
+    background: var(--primary-cta-hover);
+    border-color: var(--primary-cta-hover);
+}
+.woocommerce .oxy-product-tabs .comment-form-rating a {
+    color: var(--primary-cta-hover);
+}
+.woocommerce .oxy-product-tabs .star-rating::before {
+    color: var(--primary-cta-hover);
+}
+
+
+/* Avatar */
+.woocommerce .oxy-product-tabs #reviews #comments ol.commentlist li img.avatar {
+    border-radius: 100px;
+    border: 1px solid var(--border-normal);
+    width: 36px;
+    background: var(--box-background);
+}
+
+/* Headings */
+.woocommerce .oxy-product-tabs #reviews #comments h2, .woocommerce .oxy-product-tabs span.comment-reply-title {
+    color: var(--text-strong) ;
+    font-family: inherit;
+}
+
+/* Submit Button */
+.woocommerce .oxy-product-tabs #review_form #respond .form-submit input {
+    color: var(--primary-cta-text);
+    border-radius: var(--input-radius);
+}
+.woocommerce .oxy-product-tabs #review_form #respond .form-submit {
+    margin-bottom: 0;
+}
+
+/* Labels */
+.woocommerce .oxy-product-tabs form.comment-form label {
+    color: var(--text-normal);
+}
+
+/* Post Comment Form */
+.woocommerce .oxy-product-tabs #review_form #respond {
+    padding: 20px;
+    background: var(--box-background);
+    border: 1px solid var(--border-normal);
+    box-shadow: var(--box-shadow) 0 10px 20px;
+    border-radius: 0;
+}
+
+/* User Name */
+.woocommerce .oxy-product-tabs strong.woocommerce-review__author {
+    color: var(--text-strong);
+}
+
+/* Published Date */
+.woocommerce .oxy-product-tabs time.woocommerce-review__published-date {
+    color: var(--input-placeholder-text);
+    font-style: italic;
+}
+
+/* Verified Owner */
+.woocommerce .oxy-product-tabs em.woocommerce-review__verified {
+    color: var(--input-placeholder-text);
+}
+
+/* Review Background */
+.woocommerce .oxy-product-tabs #reviews #comments ol.commentlist li .comment-text {
+    background: var(--box-background);
+    border-radius: 0;
+}
+
+/* Review Text */
+.woocommerce .oxy-product-tabs #reviews #comments ol.commentlist li .comment-text p {
+    color: var(--text-normal);
+}

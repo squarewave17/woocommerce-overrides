@@ -16,7 +16,7 @@
  * Plugin Name:       Woocommerce Overrides
  * Plugin URI:        oxyframe.com
  * Description:       Overrides all woocommerce templates.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Paul Ryder
  * Author URI:        oxyframe.com
  * License:           GPL-2.0+
@@ -30,14 +30,33 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
+/**
+ * Remove Everything first
+ */
+
+//  ONE BY ONE
+//add_filter( 'woocommerce_enqueue_styles', 'jk_dequeue_styles' );
+function jk_dequeue_styles( $enqueue_styles ) {
+	unset( $enqueue_styles['woocommerce-general'] );	// Remove the gloss
+	unset( $enqueue_styles['woocommerce-layout'] );		// Remove the layout
+	unset( $enqueue_styles['woocommerce-smallscreen'] );	// Remove the smallscreen optimisation
+	unset( $enqueue_styles['select2'] );	
+	return $enqueue_styles;
+}
+
+// OR EVERYTHING
+add_filter( 'woocommerce_enqueue_styles', '__return_false' );
+
+/**
+ * Get woocommerce to use our templates instead
+ */
 add_filter( 'woocommerce_locate_template', 'woocommerce_overrides', 1, 3 );
    function woocommerce_overrides( $template, $template_name, $template_path ) {
      global $woocommerce;
      $_template = $template;
      if ( ! $template_path ) 
         $template_path = $woocommerce->template_url;
- 
-     $plugin_path  = untrailingslashit( plugin_dir_path( __FILE__ ) )  . '/template/woocommerce/';
+     $plugin_path  = untrailingslashit( plugin_dir_path( __FILE__ ) )  . '/templates/';
  
     // Look within passed path within the theme - this is priority
     $template = locate_template(
@@ -55,3 +74,15 @@ add_filter( 'woocommerce_locate_template', 'woocommerce_overrides', 1, 3 );
 
    return $template;
 }
+
+/**
+ * Enqueue our own stylesheet after everything else
+ */
+function woo_overrides_styles(){
+	wp_register_style( 'woo-overrides', untrailingslashit( plugin_dir_path( __FILE__ ) )  . '/templates/css/woocommerce.css');
+	
+	if ( class_exists( 'woocommerce' ) ) {
+		wp_enqueue_style( 'woo-overrides' );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'woo_overrides_styles', 99 );

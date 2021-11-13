@@ -1,0 +1,11 @@
+.woocommerce-loop-category__title .count {
+  color: var(--text-strong);
+  font-weight: 700;
+  font-size: 16px;
+  background: transparent;
+  text-decoration: none;
+}
+
+.woocommerce ul.products li.product-category a img {
+  margin-bottom: 4px;
+}

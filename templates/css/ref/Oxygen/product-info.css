@@ -1,0 +1,6 @@
+.woocommerce .oxy-product-info {
+  width: 100%;
+}
+.woocommerce .oxy-product-info table.shop_attributes {
+  margin-bottom: 0;
+}

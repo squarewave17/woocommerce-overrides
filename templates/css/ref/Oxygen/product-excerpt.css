@@ -1,0 +1,11 @@
+.oxy-product-excerpt
+  > .woocommerce-product-details__short-description
+  > p:first-child {
+  margin-top: 0;
+}
+
+.oxy-product-excerpt
+  > .woocommerce-product-details__short-description
+  > p:last-child {
+  margin-bottom: 0;
+}

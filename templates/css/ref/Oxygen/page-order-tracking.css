@@ -1,0 +1,29 @@
+.oxy-woo-order-tracking {
+  width: 100%;
+}
+.oxy-woo-order-tracking form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 640px;
+}
+.oxy-woo-order-tracking form .form-row {
+  padding: 0;
+  width: 100%;
+  clear: both;
+}
+.oxy-woo-order-tracking form .form-row.form-row-last {
+  margin-bottom: 20px;
+}
+.oxy-woo-order-tracking form .form-row button.button{
+  float: right;
+}
+.oxy-woo-order-tracking .woocommerce-customer-details address {
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+.woocommerce .woocommerce-customer-details .woocommerce-customer-details--phone::before, 
+.woocommerce .woocommerce-customer-details .woocommerce-customer-details--email::before {
+  color: var(--primary-cta);
+}

@@ -1,0 +1,53 @@
+.oxy-product-images {
+  position: relative;
+  width: 100%;
+}
+.woocommerce div.product .oxy-product-images div.images.woocommerce-product-gallery {
+  width: 100%;
+}
+.woocommerce div.product .oxy-product-images div.images {
+  margin-bottom: 0;
+}
+.woocommerce div.product .oxy-product-images div.images .flex-control-thumbs,
+.woocommerce div.product div.images .flex-control-thumbs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Horizontal bottom as Default state */
+.woocommerce div.product .oxy-product-images div.images .flex-control-thumbs,
+.woocommerce div.product div.images .flex-control-thumbs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  overflow: auto;
+}
+.woocommerce div.product .oxy-product-images div.images .flex-control-thumbs li,
+.woocommerce div.product div.images .flex-control-thumbs li {
+  width: 23%;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+/* Search Icon Styles */
+.woocommerce div.product .oxy-product-images div.images .woocommerce-product-gallery__trigger,
+.woocommerce div.product div.images .woocommerce-product-gallery__trigger {
+  background: transparent;
+}
+.woocommerce div.product .oxy-product-images div.images .woocommerce-product-gallery__trigger:before,
+.woocommerce div.product div.images .woocommerce-product-gallery__trigger:before {
+  border: 2px solid var(--border-image);
+}
+.woocommerce div.product .oxy-product-images div.images .woocommerce-product-gallery__trigger:after,
+.woocommerce div.product div.images .woocommerce-product-gallery__trigger:after {
+  background: var(--border-image);
+}
+.woocommerce div.product .oxy-product-images div.images .woocommerce-product-gallery__trigger:hover:before,
+.woocommerce div.product div.images .woocommerce-product-gallery__trigger:hover:before {
+  border: 2px solid var(--info-color);
+}
+.woocommerce div.product .oxy-product-images div.images .woocommerce-product-gallery__trigger:hover:after,
+.woocommerce div.product div.images .woocommerce-product-gallery__trigger:hover:after {
+  background: var(--info-color);
+}

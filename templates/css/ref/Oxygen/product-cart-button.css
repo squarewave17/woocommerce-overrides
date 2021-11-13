@@ -1,0 +1,29 @@
+.woocommerce div.product .oxy-product-cart-button form.cart {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.woocommerce .oxy-product-cart-button p.stock,
+.woocommerce div.product p.stock {
+  font-size: 16px;
+  color: var(--error-color);
+}
+
+.woocommerce div.product form.cart div.quantity {
+  margin: 0;
+}
+
+.woocommerce form.cart .reset_variations,
+.woocommerce div.product form.cart .reset_variations {
+  font-size: 12px;
+}
+.woocommerce form.cart .reset_variations:hover,
+.woocommerce div.product form.cart .reset_variations:hover {
+  color: var(--standard-link-hover);
+  text-decoration: underline;
+}
+
+.woocommerce .oxy-product-cart-button form.cart .variations td,
+.woocommerce div.product form.cart .variations td {
+  line-height: 2;
+}

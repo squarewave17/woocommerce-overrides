@@ -1,0 +1,7 @@
+.oxy-product-description > p:first-child {
+  margin-top: 0;
+}
+
+.oxy-product-description > p:last-child {
+  margin-bottom: 0;
+}

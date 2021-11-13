@@ -1,0 +1,205 @@
+.oxy-woo-my-account {
+  width: 100%;
+}
+.oxy-woo-my-account p {
+  color: var(--text-normal);
+  margin-top: 0;
+}
+.oxy-woo-my-account strong {
+  color: var(--text-strong);
+}
+.oxy-woo-my-account .woocommerce-MyAccount-navigation ul {
+  padding-left: 0;
+  margin-top: 0;
+}
+.oxy-woo-my-account .woocommerce-MyAccount-navigation ul li {
+  list-style-type: none;
+  padding: 8px 16px;
+  border-top: 1px solid var(--border-normal);
+}
+.oxy-woo-my-account .woocommerce-MyAccount-navigation ul li a {
+  white-space: nowrap;
+}
+.oxy-woo-my-account .woocommerce-MyAccount-navigation ul li:hover a {
+  text-decoration: none;
+}
+.oxy-woo-my-account .woocommerce-MyAccount-navigation ul li:last-child {
+  border-bottom: 1px solid var(--border-normal);
+}
+.oxy-woo-my-account .is-active {
+  background: var(--box-background);
+  border-left: 3px solid var(--primary-cta);
+  border-right: 1px solid var(--border-normal);
+}
+.oxy-woo-my-account .woocommerce-MyAccount-navigation ul li.is-active a {
+  color: var(--text-strong);
+}
+.oxy-woo-my-account td a.woocommerce-MyAccount-downloads-file.button.alt,
+.oxy-woo-my-account .woocommerce table.my_account_orders .button {
+  padding: 8px 12px;
+}
+.oxy-woo-my-account h3,
+.oxy-woo-my-account h2 {
+  color: var(--text-strong);
+  font-size: 20px;
+  line-height: 1.6;
+}
+.oxy-woo-my-account .woocommerce-account .addresses .title .edit {
+  float: left;
+  margin-left: 12px;
+}
+.oxy-woo-my-account header.woocommerce-Address-title {
+  margin-bottom: 8px;
+}
+.oxy-woo-my-account address {
+  color: var(--text-normal);
+  font-size: 12px;
+}
+.oxy-woo-my-account .woocommerce form .form-row label {
+  font-size: 12px;
+  color: var(--text-normal);
+  margin-top: 8px;
+}
+.oxy-woo-my-account .woocommerce form .form-row .required {
+  color: var(--error-color);
+  font-weight: 400;
+}
+.oxy-woo-my-account .woocommerce-EditAccountForm fieldset {
+  border: none;
+  margin-bottom: 24px;
+  padding: 0;
+  padding-top: 40px;
+  position: relative;
+  margin-top: 24px;
+  margin-left: 0;
+  margin-right: 0;
+  box-shadow: none;
+}
+.oxy-woo-my-account .woocommerce-EditAccountForm fieldset legend {
+  color: var(--text-strong);
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 700;
+  position: absolute;
+  top: 12px;
+}
+.oxy-woo-my-account .woocommerce form .form-row-first {
+  width: calc(50% - 12px);
+}
+.oxy-woo-my-account .woocommerce form .form-row-last {
+  width: 50%;
+}
+.oxy-woo-my-account .woocommerce form .form-row em {
+  font-size: 12px;
+  color: var(--input-placeholder-text);
+}
+.oxy-woo-my-account .woocommerce form.login {
+  max-width: 480px;
+  border-radius: 0;
+  margin-top: 12px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
+.oxy-woo-my-account .woocommerce form .form-row label.inline {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+}
+.oxy-woo-my-account button[name="login"] {
+  margin-top: 24px;
+}
+.oxy-woo-my-account p.woocommerce-LostPassword.lost_password {
+  font-size: 12px;
+}
+.oxy-woo-my-account form.woocommerce-ResetPassword.lost_reset_password {
+  max-width: 480px;
+  padding: 20px;
+}
+.oxy-woo-my-account form.woocommerce-ResetPassword.lost_reset_password p {
+  margin-bottom: 0;
+}
+.oxy-woo-my-account
+  form.woocommerce-ResetPassword.lost_reset_password
+  p.woocommerce-form-row.woocommerce-form-row--first.form-row.form-row-first {
+  width: 100%;
+  margin-bottom: 16px;
+}
+.oxy-woo-my-account mark {
+  background: transparent;
+  font-weight: 700;
+  color: var(--text-strong);
+}
+.oxy-woo-my-account .woocommerce table.shop_table tfoot th,
+.oxy-woo-my-account .woocommerce table.shop_table tfoot td {
+  font-weight: 400;
+  border-top: 1px solid var(--border-normal);
+}
+.oxy-woo-my-account .woocommerce-Price-amount {
+  color: var(--text-strong);
+  font-weight: 700;
+}
+.oxy-woo-my-account .woocommerce .woocommerce-customer-details address {
+  padding: 0;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+}
+.oxy-woo-my-account
+  .woocommerce
+  .woocommerce-customer-details
+  .woocommerce-customer-details--email::before,
+.oxy-woo-my-account
+  .woocommerce
+  .woocommerce-customer-details
+  .woocommerce-customer-details--phone::before {
+  color: var(--primary-cta);
+}
+.oxy-woo-my-account .woocommerce form .form-row {
+  padding: 0px;
+}
+.woocommerce table.my_account_orders td {
+  font-size: 16px;
+}
+.oxy-woo-my-account .woocommerce-address-fields__field-wrapper {
+  margin-bottom: 24px;
+}
+.oxy-woo-my-account .woocommerce ul#shipping_method li {
+  margin-bottom: 0;
+}
+.oxy-woo-my-account
+  .select2-container--default
+  .select2-search--dropdown
+  .select2-search__field {
+  font-size: 12px;
+  padding: 8px;
+  outline: none;
+}
+.oxy-woo-my-account
+  .select2-container--default
+  .select2-results__option--highlighted[aria-selected],
+.oxy-woo-my-account
+  .select2-container--default
+  .select2-results__option--highlighted[data-selected] {
+  background: var(--info-color);
+}
+.oxy-woo-my-account .select2-dropdown {
+  border-radius: 0;
+  box-shadow: var(--box-shadow) 0 12px 12px;
+}
+.oxy-woo-my-account .select2-results__option {
+  padding: 8px;
+  font-size: 12px;
+  outline: none;
+}
+.oxy-woo-my-account
+  .select2-container--default
+  .select2-results__option[data-selected="true"] {
+  background: var(--error-color);
+  color: white;
+}
+
+/* Product Meta */
+.oxy-woo-my-account ul.wc-item-meta {
+  padding: 0;
+  margin-top: 4px;
+}
