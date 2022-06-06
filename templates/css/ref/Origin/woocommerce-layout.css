@@ -1,4 +1,3 @@
-@charset "UTF-8";
 :root {
   --woocommerce: #a46497;
   --wc-green: #7ad03a;
@@ -445,12 +444,8 @@
 }
 .woocommerce form .password-input,
 .woocommerce-page form .password-input {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   flex-direction: column;
-  -webkit-box-pack: center;
   justify-content: center;
   position: relative;
 }
@@ -479,7 +474,7 @@
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   margin-left: 0.618em;
-  content: "";
+  content: "\e010";
   text-decoration: none;
 }
 .woocommerce form .show-password-input.display-password::after,

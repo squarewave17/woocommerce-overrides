@@ -95,6 +95,9 @@
 }
 .oxy-woo-my-account .woocommerce form.login {
   max-width: 480px;
+}
+.oxy-woo-my-account .woocommerce form.login,
+.oxy-woo-my-account .woocommerce form.register {
   border-radius: 0;
   margin-top: 12px;
   padding-bottom: 8px;

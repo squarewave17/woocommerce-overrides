@@ -220,7 +220,6 @@ p.demo_store a {
   position: relative;
 }
 .woocommerce div.product div.images .woocommerce-product-gallery__wrapper {
-  -webkit-transition: all cubic-bezier(0.795, -0.035, 0, 1) 0.5s;
   transition: all cubic-bezier(0.795, -0.035, 0, 1) 0.5s;
   margin: 0;
   padding: 0;
@@ -381,7 +380,7 @@ p.demo_store a {
 }
 .woocommerce div.product .woocommerce-tabs ul.tabs li a:hover {
   text-decoration: none;
-  color: #6b6a6b;
+  color: #6b6b6b;
 }
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active {
   background: #fff;
@@ -481,11 +480,12 @@ p.demo_store a {
 .woocommerce div.product form.cart .variations td,
 .woocommerce div.product form.cart .variations th {
   border: 0;
-  vertical-align: top;
   line-height: 2em;
+  vertical-align: top;
 }
 .woocommerce div.product form.cart .variations label {
   font-weight: 700;
+  text-align: left;
 }
 .woocommerce div.product form.cart .variations select {
   max-width: 100%;
@@ -946,7 +946,7 @@ p.demo_store a {
   font-family: star;
 }
 .woocommerce .star-rating::before {
-  content: "\73\73\73\73\73";
+  content: "sssss";
   color: #d3ced2;
   float: left;
   top: 0;
@@ -962,7 +962,7 @@ p.demo_store a {
   padding-top: 1.5em;
 }
 .woocommerce .star-rating span::before {
-  content: "\53\53\53\53\53";
+  content: "SSSSS";
   top: 0;
   position: absolute;
   left: 0;
@@ -1150,7 +1150,7 @@ p.demo_store a {
   table.woocommerce-MyAccount-downloads
   th
   .woocommerce-MyAccount-downloads-file::before {
-  content: "\2193";
+  content: "↓";
   display: inline-block;
 }
 .woocommerce td.product-name .wc-item-meta,
@@ -1517,7 +1517,7 @@ p.demo_store a {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   margin-right: 0.618em;
-  content: "";
+  content: "\e037";
   text-decoration: none;
   margin-left: -1.5em;
   line-height: 1.75;
@@ -1534,7 +1534,7 @@ p.demo_store a {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   margin-right: 0.618em;
-  content: "";
+  content: "\e02d";
   text-decoration: none;
   margin-left: -1.5em;
   line-height: 1.75;
@@ -1588,7 +1588,7 @@ p.demo_store a {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   margin-right: 0.618em;
-  content: "";
+  content: "\e013";
   text-decoration: none;
   color: #a00;
 }
@@ -1620,7 +1620,7 @@ p.demo_store a {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   margin-right: 0.618em;
-  content: "";
+  content: "\e013";
   text-decoration: none;
   color: #a00;
   vertical-align: inherit;
@@ -1718,7 +1718,7 @@ p.demo_store a {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   margin-right: 0.618em;
-  content: "";
+  content: "\e013";
   text-decoration: none;
   color: #a00;
 }
@@ -1859,7 +1859,7 @@ p.demo_store a {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   margin-right: 0.618em;
-  content: "";
+  content: "\e00a";
   text-decoration: none;
 }
 .woocommerce-account ul.digital-downloads li .count {
@@ -1946,7 +1946,7 @@ p.demo_store a {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   margin-left: 0.618em;
-  content: "";
+  content: "\e019";
   text-decoration: none;
 }
 #add_payment_method .cart-collaterals .shipping-calculator-form,

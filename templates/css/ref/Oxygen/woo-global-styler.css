@@ -51,10 +51,13 @@
 }
 
 /*------Rating Stars--------*/
-.woocommerce .star-rating::before {
+.woocommerce .star-rating::before,
+.woocommerce .stars:not(.selected) span a,
+.woocommerce .stars.selected span a.active ~ a {
   color: var(--star-rating-greyed);
 }
-.woocommerce .star-rating {
+.woocommerce .star-rating,
+.woocommerce .stars.selected span a {
   color: var(--star-rating-primary);
 }
 
@@ -335,7 +338,7 @@ a.woocommerce-review-link:hover,
 .woocommerce h1.page-title,
 .woocommerce h1.product_title,
 .woocommerce section.related.products h2,
-.woocommerce section.upsells.products h2,
+.oxy-product-upsells > :is(h1, h2, h3, h4, h5, h6),
 .woocommerce h2.woocommerce-Reviews-title,
 .woocommerce span.comment-reply-title,
 .woocommerce-Tabs-panel h2,
@@ -394,6 +397,10 @@ h2.woocommerce-order-details__title,
   color: var(--text-strong);
   font-weight: 700;
   font-size: inherit;
+}
+
+.woocommerce div.product p.price {
+  font-size: 16px;
 }
 
 .woocommerce div.product p.price ins,
@@ -822,12 +829,12 @@ p.woocommerce-result-count {
 .woocommerce .woocommerce-widget-layered-nav-list .woocommerce-widget-layered-nav-list__item,
 .select2-search--dropdown .select2-search__field,
 .woocommerce
-  label.woocommerce-form__label.woocommerce-form__label-for-checkbox.checkbox
+  label.woocommerce-form__label.woocommerce-form__label-for-checkbox
   span::before,
 .woocommerce ul.tabs li,
 .woocommerce .woocommerce-product-gallery__trigger:after,
 .woocommerce .woocommerce-product-gallery__trigger:before,
-.woocommerce img:not(.zoomImg),
+.woocommerce img:not(.zoomImg):not(.pswp__img),
 .woocommerce textarea,
 .woocommerce .checkbox,
 .woocommerce .select2-selection,
@@ -890,21 +897,28 @@ p.woocommerce-result-count {
   -ms-user-select: none;
   user-select: none;
   opacity: 0.01;
+  display: none !important;
 }
 .woocommerce-form-login
   label.woocommerce-form__label.woocommerce-form__label-for-checkbox.woocommerce-form-login__rememberme,
 .oxy-woo-checkout
-  label.woocommerce-form__label.woocommerce-form__label-for-checkbox.checkbox {
+  label.woocommerce-form__label.woocommerce-form__label-for-checkbox {
   position: relative;
   cursor: pointer;
   padding-left: 16px;
   margin-top: 0;
 }
 .woocommerce-form-login
+  label.woocommerce-form__label.woocommerce-form__label-for-checkbox.woocommerce-form-login__rememberme span,
+.oxy-woo-checkout
+  label.woocommerce-form__label.woocommerce-form__label-for-checkbox span{
+    margin-left: 18px;
+}
+.woocommerce-form-login
   label.woocommerce-form__label.woocommerce-form__label-for-checkbox.woocommerce-form-login__rememberme
   span::before,
 .oxy-woo-checkout
-  label.woocommerce-form__label.woocommerce-form__label-for-checkbox.checkbox
+  label.woocommerce-form__label.woocommerce-form__label-for-checkbox
   span::before {
   width: 24px;
   height: 24px;
@@ -919,7 +933,8 @@ p.woocommerce-result-count {
   background-repeat: no-repeat;
   background-position: center center;
 }
-input[type="checkbox"]:checked ~ span::before {
+input[type="checkbox"]:checked ~ span::before,
+input[type="checkbox"]:checked ~ label span::before {
   background: url(%%ASSETS_PATH%%/check-mark.svg), var(--box-background);
 }
 .woocommerce-form-login
@@ -927,7 +942,7 @@ input[type="checkbox"]:checked ~ span::before {
   margin-top: 34px;
 }
 .oxy-woo-checkout
-  label.woocommerce-form__label.woocommerce-form__label-for-checkbox.checkbox
+  label.woocommerce-form__label.woocommerce-form__label-for-checkbox
   span::before {
   margin-top: -4px;
 }
@@ -982,6 +997,13 @@ input[type="checkbox"]:checked ~ span::before {
   cursor: pointer;
 }
 
+/* WooCommerce Payments plugin compatibility */
+.woocommerce input[type=radio].woocommerce-SavedPaymentMethods-tokenInput {
+  width: 20px !important;
+  height: 20px !important;
+  margin: 6px 8px 0 0 !important;
+}
+
 .woocommerce input[type=radio]:hover {
   border: 1px solid var(--input-focus-border);
   box-shadow: 0 0 5px var(--input-focus-border);
@@ -990,6 +1012,11 @@ input[type="checkbox"]:checked ~ span::before {
 .woocommerce input[type=radio]:checked {
   background: var(--text-strong);
   box-shadow: inset 0 0 0 8px var(--box-background);
+}
+
+/* WooCommerce Payments plugin compatibility */
+.woocommerce input[type=radio].woocommerce-SavedPaymentMethods-tokenInput:checked {
+  box-shadow: inset 0 0 0 4px var(--box-background);
 }
 
 .woocommerce input[type=radio]:checked:hover {
@@ -1007,6 +1034,7 @@ input[type="checkbox"]:checked ~ span::before {
 .woocommerce #reviews #comments ol.commentlist li .comment-text,
 ul.woocommerce-order-overview,
 .woocommerce form.login,
+.woocommerce form.register,
 .woocommerce form.checkout_coupon,
 .woocommerce table.shop_table {
   border: 1px solid var(--border-normal);
@@ -1341,4 +1369,27 @@ fieldset {
 /*---Product Title Hotfix (Must be in product-title.css)---*/
 .woocommerce h1.product_title.oxy-product-title {
   margin: 0;
+}
+
+/*---Fix for shopping cart duplication issue on AJAX update---*/
+.ct-modal .woocommerce-cart-form:not(:nth-child(2)) {
+  display: none;
+}
+
+.ct-modal .cart-collaterals > .cart_totals:not(:nth-child(1)) {
+  display: none;
+}
+
+/*---Fix for WooCommerce Payments credit card images on checkout---*/
+.woocommerce label[for="payment_method_woocommerce_payments"],
+.woocommerce label[for="payment_method_bacs"],
+.woocommerce label[for="payment_method_cod"] {
+  display: flex;
+  flex-direction: row;
+}
+
+.woocommerce label[for="payment_method_woocommerce_payments"] img,
+.woocommerce label[for="payment_method_bacs"] img,
+.woocommerce label[for="payment_method_cod"] img {
+  width: 32px;
 }

@@ -5,8 +5,8 @@
     background: var(--primary-cta);
     border-color: var(--primary-cta);
 }
-.woocommerce .oxy-product-tabs .star-rating span {
-    color: var(--primary-cta);
+.woocommerce .star-rating span {
+    color: var(--star-rating-primary);
 }
 .woocommerce .oxy-product-tabs #reviews #comments ol.commentlist li .comment-text {
     border-top-color: var(--primary-cta);
@@ -24,10 +24,6 @@
 .woocommerce .oxy-product-tabs .comment-form-rating a {
     color: var(--primary-cta-hover);
 }
-.woocommerce .oxy-product-tabs .star-rating::before {
-    color: var(--primary-cta-hover);
-}
-
 
 /* Avatar */
 .woocommerce .oxy-product-tabs #reviews #comments ol.commentlist li img.avatar {
